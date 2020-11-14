@@ -1,8 +1,6 @@
-manifold-sdk-js
-==========
+# manifold-sdk-js
 
-
------
+---
 
 **Features:**
 
@@ -17,23 +15,19 @@ manifold-sdk-js
 - Fully **TypeScript**-ready, with definition files and full TypeScript source
 - **MIT License** (including ALL dependencies); completely open source, tweak as you please
 
------
+---
 
-Compiling the source code
--------------------------
+## Compiling the source code
 
 To install all dependecies and build the source code run `make build`.
 
-
-Installing in Node.js
----------------------
+## Installing in Node.js
 
 Install the manifold-sdk-js library from your project directory::
 
     npm install --save manifold-sdk-js
 
-Importing
----------
+## Importing
 
 **JavaScript (ES3)**
 
@@ -47,14 +41,12 @@ Importing
 
     import { manifold } from 'manifold-sdk-js';
 
------
+---
 
-Acknowledgement
----------------
+## Acknowledgement
 
 portions from `ethers.js`
 
-
-### License 
+### License
 
 MIT

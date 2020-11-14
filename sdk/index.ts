@@ -1,3 +1,3 @@
-import * as manifold from './manifold';
+import * as manifold from "./manifold";
 export { manifold };
-export * from './manifold';
+export * from "./manifold";

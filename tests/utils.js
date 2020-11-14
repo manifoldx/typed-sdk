@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var getMxw = require('./utils-manifold');
+var getMxw = require("./utils-manifold");
 
 module.exports = {
-    getMxw: getMxw
-}
+  getMxw: getMxw,
+};
