@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+docs/_build/
+tests/env/
+tests/env.ts
