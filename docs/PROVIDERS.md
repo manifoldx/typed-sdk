@@ -164,7 +164,7 @@ Returns a `Promise <promise>` with the balance (as a
 
     provider.getBalance(address).then((balance) => {
 
-        // balance is a BigNumber (in cin); format is as a string (in manifold)
+        // balance is a BigNumber (in gwei); format is as a string (in manifold)
         let manifoldString = manifold.utils.formatMan(balance);
 
         console.log("Balance: " + manifoldString);
@@ -283,10 +283,10 @@ The valid routes and transaction types are:
     {
         amount: [
             {
-                // The denomination should be in cin
+                // The denomination should be in gwei
                 denom: string,
 
-                // The fee amount in cin
+                // The fee amount in gwei
                 amount: BigNumberish
             }
         ],

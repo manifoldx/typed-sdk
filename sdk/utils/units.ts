@@ -9,12 +9,12 @@ import { BigNumber, bigNumberify } from "./bignumber";
 // Imported Types
 import { BigNumberish } from "./bignumber";
 
-const power18UnitName = "cin";
-const power16UnitName = "kcin";
-const power13UnitName = "Mcin";
-const power10UnitName = "Gcin";
-const power7UnitName = "Tcin";
-const power4UnitName = "Jcin";
+const power18UnitName = "gwei";
+const power16UnitName = "kgwei";
+const power13UnitName = "Mgwei";
+const power10UnitName = "Ggwei";
+const power7UnitName = "Tgwei";
+const power4UnitName = "Jgwei";
 const power1UnitName = "manifold";
 
 const unitDecimals = 18;
@@ -263,8 +263,8 @@ export function parseUnits(
   return wei;
 }
 
-export function formatMan(cin: BigNumberish): string {
-  return formatUnits(cin, unitDecimals);
+export function formatMan(gwei: BigNumberish): string {
+  return formatUnits(gwei, unitDecimals);
 }
 
 export function parseMan(manifold: string): BigNumber {

@@ -230,7 +230,7 @@ Returns a `Promise <promise>` with the balance (as a
 
     provider.getBalance(address).then((balance) => {
 
-        // balance is a BigNumber (in cin); format is as a string (in manifold)
+        // balance is a BigNumber (in gwei); format is as a string (in manifold)
         let manifoldString = manifold.utils.formatMan(balance);
 
         console.log("Balance: " + manifoldString);
@@ -347,10 +347,10 @@ The valid routes and transaction types are:
     {
         amount: [
             {
-                // The denomination should be in cin
+                // The denomination should be in gwei
                 denom: string,
 
-                // The fee amount in cin
+                // The fee amount in gwei
                 amount: BigNumberish
             }
         ],
@@ -748,14 +748,14 @@ Returns a Uint8Array of cryptographically secure random bytes.
 
 <sup>utils</sup> . parseMan ( manifoldString )   <span class="title-ref">=&gt; BigNumber</span>  
 Parses the _manifoldString_ representation of MXW into a BigNumber
-instance of the amount of cin.
+instance of the amount of gwei.
 
 </div>
 
 <div id="formatMan">
 
-<sup>utils</sup> . formatMan ( cin )   <span class="title-ref">=&gt; string</span>  
-Formats an amount of _cin_ into a decimal string representing the amount
+<sup>utils</sup> . formatMan ( gwei )   <span class="title-ref">=&gt; string</span>  
+Formats an amount of _gwei_ into a decimal string representing the amount
 of MXW. The output will always include at least one whole number and at
 least one decimal place, otherwise leading and trailing 0's will be
 trimmed.
@@ -774,7 +774,7 @@ _decimalsOrUnitsName_ may be a number of decimals between 3 and 18
 <div id="formatUnits">
 
 <sup>utils</sup> . formatUnits ( value , decimalsOrUnitName )   <span class="title-ref">=&gt; string</span>  
-Formats an amount of cin into a decimal string representing the amount
+Formats an amount of gwei into a decimal string representing the amount
 of units. The output will always include at least one whole number and
 at least one decimal place, otherwise leading and trailing 0's will be
 trimmed. The _decimalsOrUnitsName_ may be a number of decimals between 3
@@ -796,12 +796,12 @@ also not contain a decimal.
     console.log(utils.formatMan(0));
     // "0.0"
 
-    let cin = utils.bigNumberify("1000000000000000000000");
+    let gwei = utils.bigNumberify("1000000000000000000000");
 
-    console.log(utils.formatMan(cin));
+    console.log(utils.formatMan(gwei));
     // "1000.0"
 
-    console.log(utils.commify(cin.toString()));
+    console.log(utils.commify(gwei.toString()));
     // "1,000,000,000,000,000,000,000"
 
 ### Hex Strings

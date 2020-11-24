@@ -28,13 +28,13 @@ Why can't I just use numbers?
 
 The first problem many encounter when dealing with Manifold Finance is the concept of numbers. Most
 common currencies are broken down with very little granularity. For example, there are only
-100 cents in a single dollar. However, there are  10\ :sup:`18` **cin** in a single
+100 cents in a single dollar. However, there are  10\ :sup:`18` **gwei** in a single
 **manifold**.
 
 JavaScript uses `IEEE 754 double-precision binary floating point`_ numbers to represent
 numeric values. As a result, there are *holes* in the integer set after
 9,007,199,254,740,991; which is problematic for *Manifold Finance* because that is only
-around 0.009 manifold (in cin).
+around 0.009 manifold (in gwei).
 
 To demonstrate how this may be an issue in your code, consider::
 
@@ -45,7 +45,7 @@ To demonstrate how this may be an issue in your code, consider::
 To remedy this, all numbers (which can be large) are stored and manipulated
 as :ref:`Big Numbers <bignumber>`.
 
-The functions :ref:`parseMan( manifoldString ) <parseMan>` and :ref:`formatMan( cin ) <formatMan>` can be used to convert between
+The functions :ref:`parseMan( manifoldString ) <parseMan>` and :ref:`formatMan( gwei ) <formatMan>` can be used to convert between
 string representations, which are displayed to or entered by the user and Big Number representations
 which can have mathematical operations handled safely.
 
@@ -122,7 +122,7 @@ A few notes on contributing.
 
 - An important feature of manifold-sdk is that it is small, which means uncommon features or large features need a great deal of discussion.
 - Dependencies; part A) in line with the above, "keep things small", adding a dependency is a big deal, as they often bring many other packages with them. A great deal of effort has been used to tune the build process and dependency list to keep things tight
-- Dependencies; part B) adding additional third party libraries, adds a huge attack vector fun malicious code or unexpected consequences, so adding a dependency is certainly something that needs to be very convincingly argued.
+- Dependencies; part B) adding additional third party libraries, adds a huge attack vector fun malicious code or unexpected consequences, so adding a dependency is certainly something that needs to be very convingweigly argued.
 - Dependencies; part C) part B applies to dev dependencies too. A devDependency can inject or otherwise do strange things and increases the attack vector for bugs and malicious code
 - Changing filenames or breaking backwards compatibility is a no-go for minor version changes
 - Major version changes do not happen often. We place @TODO in the source code for things that will be updated at the next version change.

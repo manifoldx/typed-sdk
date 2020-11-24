@@ -58,7 +58,7 @@ All properties for transaction are optional.
         "fee": {
             "amount": [
                 {
-                    "denom": "cin",
+                    "denom": "gwei",
                     "amount": "0"
                 }
             ],
@@ -103,12 +103,12 @@ which resolves to the expected transaction type.
         {
             type: "cosmos-sdk/StdTx",
             value: {
-                // Transaction system fee in 18 decimals (cin)
+                // Transaction system fee in 18 decimals (gwei)
                 fee: {
                     amount: [
                         {
                             amount: "10000000000000000000",
-                            denom: "cin"
+                            denom: "gwei"
                         }
                     ],
                     gas: "200000"
@@ -127,7 +127,7 @@ which resolves to the expected transaction type.
                             amount: [
                                 {
                                     amount: "100000000000000000000000",
-                                    denom: "cin"
+                                    denom: "gwei"
                                 }
                             ],
                             fromAddress: "manifold1x7tp9tt7mu0jm6qdmljgntvzzp53lrtndr7h8x",
@@ -213,7 +213,7 @@ Transaction Receipts
                     amount: [
                         {
                             amount: "10000000000000000000",
-                            denom: "cin"
+                            denom: "gwei"
                         }
                     ],
                     gas: "200000"
@@ -226,7 +226,7 @@ Transaction Receipts
                             amount: [
                                 {
                                     amount: "100000000000000000000000",
-                                    denom: "cin"
+                                    denom: "gwei"
                                 }
                             ],
                             fromAddress: "manifold1x7tp9tt7mu0jm6qdmljgntvzzp53lrtndr7h8x",

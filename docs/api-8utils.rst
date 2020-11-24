@@ -361,12 +361,12 @@ MXW Strings and Cin
 
 :sup:`utils` . parseMan ( manifoldString ) |nbsp| `=> BigNumber`
     Parses the *manifoldString* representation of MXW into a BigNumber instance
-    of the amount of cin.
+    of the amount of gwei.
 
 .. _formatMan:
 
-:sup:`utils` . formatMan ( cin ) |nbsp| `=> string`
-    Formats an amount of *cin* into a decimal string representing the amount of MXW.
+:sup:`utils` . formatMan ( gwei ) |nbsp| `=> string`
+    Formats an amount of *gwei* into a decimal string representing the amount of MXW.
     The output will always include at least one whole number and at least one decimal
     place, otherwise leading and trailing 0's will be trimmed.
 
@@ -379,7 +379,7 @@ MXW Strings and Cin
 .. _formatUnits:
 
 :sup:`utils` . formatUnits ( value , decimalsOrUnitName ) |nbsp| `=> string`
-    Formats an amount of cin into a decimal string representing the amount of units. 
+    Formats an amount of gwei into a decimal string representing the amount of units. 
     The output will always include at least one whole number and at least one decimal place,
     otherwise leading and trailing 0's will be trimmed. The *decimalsOrUnitsName*
     may be a number of decimals between 3 and 18 (multiplication of 3).
@@ -401,12 +401,12 @@ MXW Strings and Cin
     console.log(utils.formatMan(0));
     // "0.0"
 
-    let cin = utils.bigNumberify("1000000000000000000000");
+    let gwei = utils.bigNumberify("1000000000000000000000");
 
-    console.log(utils.formatMan(cin));
+    console.log(utils.formatMan(gwei));
     // "1000.0"
 
-    console.log(utils.commify(cin.toString()));
+    console.log(utils.commify(gwei.toString()));
     // "1,000,000,000,000,000,000,000"
 
 -----

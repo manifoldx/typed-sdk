@@ -99,7 +99,7 @@ Signing
                         amount: [
                             {
                                 amount: amount,
-                                denom: "cin",
+                                denom: "gwei",
                             },
                         ],
                         from_address: wallet.address,
@@ -160,7 +160,7 @@ These operations require the wallet have a provider attached to it.
 
 :sup:`prototype` . getBalance ( ) |nbsp| `=> Promise<BigNumber>`
     Returns a :ref:`Promise <promise>` that resolves to the balance (as a :ref:`BigNumber <bignumber>`,
-    in **cin**) of the wallet. Be aware of the number of decimals for *cin* is 18.
+    in **gwei**) of the wallet. Be aware of the number of decimals for *gwei* is 18.
     The balance can be convert to a human readable format by :ref:`formatMan <formatMan>`, versa :ref:`parseMan <parseMan>`.
 
 .. code-block:: javascript
@@ -203,8 +203,8 @@ These operations require the wallet have a provider attached to it.
     Sends the *transfer transaction* to the network and returns a :ref:`Promise <promise>` that resolves to a
     :ref:`Transaction Receipt <transaction-receipt>`.
 
-    The :ref:`AddressOrName <addressOrName>` can be set to recipient alias or wallet address. The ``value`` is the number of *cin*
-    (as a :ref:`BigNumber <bignumber>`) that transfers to recipient. Be aware of the number of decimals for *cin*
+    The :ref:`AddressOrName <addressOrName>` can be set to recipient alias or wallet address. The ``value`` is the number of *gwei*
+    (as a :ref:`BigNumber <bignumber>`) that transfers to recipient. Be aware of the number of decimals for *gwei*
     is 18.
 
 .. code-block:: javascript
@@ -221,8 +221,8 @@ These operations require the wallet have a provider attached to it.
     // to: "jeansoon",
 
     let amount = manifold.utils.parseMan("1.0");
-    // We must pass in the amount as cin (1 manifold = 1e18 cin), so we
-    // use this convenience function to convert manifold to cin.
+    // We must pass in the amount as gwei (1 manifold = 1e18 gwei), so we
+    // use this convenience function to convert manifold to gwei.
 
     wallet.transfer(to, amount).then((receipt) => {
          console.log(receipt.status);

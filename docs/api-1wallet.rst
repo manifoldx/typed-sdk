@@ -340,7 +340,7 @@ another wallet, it will be encryted again using their public key.
                         amount: [
                             {
                                 amount: amount,
-                                denom: "cin",
+                                denom: "gwei",
                             },
                         ],
                         from_address: wallet.address,
@@ -407,7 +407,7 @@ These operations require wallet to be connected to protocol by a network provide
 
 :sup:`prototype` . getBalance ( ) |nbsp| `=> Promise<BigNumber>`
     Returns a :ref:`Promise <promise>` that resolves to the balance of the wallet (as a :ref:`BigNumber <bignumber>`,
-    in **cin**). Be aware that the number of decimals for *cin* is 18.
+    in **gwei**). Be aware that the number of decimals for *gwei* is 18.
     The balance can be converted to a human-readable format by :ref:`formatMXW <formatMan>`, versa :ref:`parseMXW <parseMan>`.
 
 .. code-block:: javascript
@@ -451,8 +451,8 @@ These operations require wallet to be connected to protocol by a network provide
     Sends the *transfer transaction* to the network and returns a :ref:`Promise <promise>` that resolves to a
     :ref:`Transaction Receipt <transaction-receipt>`.
 
-    The :ref:`AddressOrName <addressOrName>` can be set to recipient's alias or wallet address. The ``value`` is the number of *cin*
-    (as a :ref:`BigNumber <bignumber>`) that is being transferred to recipient. Be aware that the number of decimals for *cin*
+    The :ref:`AddressOrName <addressOrName>` can be set to recipient's alias or wallet address. The ``value`` is the number of *gwei*
+    (as a :ref:`BigNumber <bignumber>`) that is being transferred to recipient. Be aware that the number of decimals for *gwei*
     is 18.
 
 .. code-block:: javascript
@@ -469,8 +469,8 @@ These operations require wallet to be connected to protocol by a network provide
     // to: "jeansoon",
 
     let amount = manifold.utils.parseMan("1.0");
-    // We must pass in the amount as cin (1 MXW = 1e18 cin), so we
-    // use this convenient function to convert MXW to cin.
+    // We must pass in the amount as gwei (1 MXW = 1e18 gwei), so we
+    // use this convenient function to convert MXW to gwei.
 
     wallet.transfer(to, amount).then((receipt) => {
          console.log(receipt.status);
