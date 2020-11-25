@@ -4,10 +4,10 @@
    contain the root `toctree` directive.
 
 ******************
-What is manifold-sdk
+Manifold Finance
 ******************
 
-The manifold-sdk library aims to be a complete and compact library for interacting with the Manifold Finance protocol and its ecosystem.
+The `manifold-sdk` library aims to be a complete and compact library for interacting with the Manifold Finance protocol and its ecosystem.
 
 -----
 
@@ -43,7 +43,7 @@ Features
 Acknowledgement
 ===============
 
-The initial idea was brought over `ethers.js`_, but soon after moving further, this library becomes its own entity.
+Credit to the base library `ethers.js`
 
 -----
 
