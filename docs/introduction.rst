@@ -5,7 +5,7 @@ Introduction
 .. image:: ../docs/images/SDKOverview.jpg
 
 Wallets are individual "accounts" created by each Manifold Finance protocol user.
-Each wallet can request for different operations, transfer MXW, send message, and etc.
+Each wallet can request for different operations, transfer ERC, send message, and etc.
 
 Each wallet is required to be connected by a network provider to the protocol/server 
 in order to run any protocol-related operations (e.g., transfer, check  balance, etc.).

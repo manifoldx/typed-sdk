@@ -283,7 +283,7 @@ Blockchain Status
             - **kyc-whitelist** --- the whitelist transaction type
             - **kyc-revokeWhitelist** --- the revoke whitelist transaction type
         - **bank** --- the route for bank module
-            - **bank-send** --- the transfer MXW transaction type
+            - **bank-send** --- the transfer ERC transaction type
         - **token** --- the route for token module
             - **token-mintFungibleToken** --- the mint transaction type
             - **token-burnFungibleToken** --- the burn transaction type

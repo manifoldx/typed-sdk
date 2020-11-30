@@ -408,7 +408,7 @@ These operations require wallet to be connected to protocol by a network provide
 :sup:`prototype` . getBalance ( ) |nbsp| `=> Promise<BigNumber>`
     Returns a :ref:`Promise <promise>` that resolves to the balance of the wallet (as a :ref:`BigNumber <bignumber>`,
     in **gwei**). Be aware that the number of decimals for *gwei* is 18.
-    The balance can be converted to a human-readable format by :ref:`formatMXW <formatMan>`, versa :ref:`parseMXW <parseMan>`.
+    The balance can be converted to a human-readable format by :ref:`formatERC <formatMan>`, versa :ref:`parseERC <parseMan>`.
 
 .. code-block:: javascript
     :caption: check wallet balance
@@ -456,7 +456,7 @@ These operations require wallet to be connected to protocol by a network provide
     is 18.
 
 .. code-block:: javascript
-    :caption: *transfer MXW*
+    :caption: *transfer ERC*
 
     // We require a provider to send transactions
     let networkProvider = manifold.getDefaultProvider("localnet");
@@ -469,8 +469,8 @@ These operations require wallet to be connected to protocol by a network provide
     // to: "jeansoon",
 
     let amount = manifold.utils.parseMan("1.0");
-    // We must pass in the amount as gwei (1 MXW = 1e18 gwei), so we
-    // use this convenient function to convert MXW to gwei.
+    // We must pass in the amount as gwei (1 ERC = 1e18 gwei), so we
+    // use this convenient function to convert ERC to gwei.
 
     wallet.transfer(to, amount).then((receipt) => {
          console.log(receipt.status);

@@ -404,7 +404,7 @@ export function encrypt(
 
     // We take 80 bytes:
     //   - 48 bytes   As normal for the Web3 secret storage (derivedKey, macPrefix)
-    //   - 32 bytes   AES key to encrypt mnemonic with (required here to be MXW Wallet)
+    //   - 32 bytes   AES key to encrypt mnemonic with (required here to be ERC Wallet)
     scrypt(passwordBytes, salt, N, r, p, 80, function (error, progress, key) {
       if (error) {
         error.progress = progress;

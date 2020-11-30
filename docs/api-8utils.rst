@@ -231,7 +231,7 @@ Constants
 :sup:`manifold . constants` . Two
     The :ref:`BigNumber <bignumber>` ``bigNumberify(2)``.
 
-:sup:`manifold . constants` . CinPerMan
+:sup:`manifold . constants` . GweiPerMan
     The :ref:`BigNumber <bignumber>` ``bigNumberify("1000000000000000000")``.
 
 -----
@@ -354,19 +354,19 @@ Random
     // BigNumber { _hex: 0x5de9cfc233211c316be4a1eb0fd6d9f8244386a704681310a8f59a4b7cebe2a5 }
 
 
-MXW Strings and Cin
+ERC Strings and Gwei
 ###################
 
 .. _parseMan:
 
 :sup:`utils` . parseMan ( manifoldString ) |nbsp| `=> BigNumber`
-    Parses the *manifoldString* representation of MXW into a BigNumber instance
+    Parses the *manifoldString* representation of ERC into a BigNumber instance
     of the amount of gwei.
 
 .. _formatMan:
 
 :sup:`utils` . formatMan ( gwei ) |nbsp| `=> string`
-    Formats an amount of *gwei* into a decimal string representing the amount of MXW.
+    Formats an amount of *gwei* into a decimal string representing the amount of ERC.
     The output will always include at least one whole number and at least one decimal
     place, otherwise leading and trailing 0's will be trimmed.
 

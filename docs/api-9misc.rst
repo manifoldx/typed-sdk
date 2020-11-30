@@ -89,7 +89,7 @@ In order to execute a transaction, a request must be sent. A transaction request
 * Transaction fee
 
 * Transaction memo
-    - Transaction type (type of transaction is involved [e.g., transfer MXW, send message, etc.])
+    - Transaction type (type of transaction is involved [e.g., transfer ERC, send message, etc.])
     - Transaction data or variables involved
 
 * Transaction signature (done by the requester)

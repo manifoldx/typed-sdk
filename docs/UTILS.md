@@ -215,7 +215,7 @@ The `BigNumber <bignumber>` `bigNumberify(1)`.
 <sup>manifold . constants</sup> . Two  
 The `BigNumber <bignumber>` `bigNumberify(2)`.
 
-<sup>manifold . constants</sup> . CinPerMan  
+<sup>manifold . constants</sup> . GweiPerMan  
 The `BigNumber <bignumber>` `bigNumberify("1000000000000000000")`.
 
 ---
@@ -329,12 +329,12 @@ Returns a Uint8Array of cryptographically secure random bytes.
     let randomNumber = utils.bigNumberify(utils.randomBytes(32));
     // BigNumber { _hex: 0x5de9cfc233211c316be4a1eb0fd6d9f8244386a704681310a8f59a4b7cebe2a5 }
 
-## MXW Strings and Cin
+## ERC Strings and Gwei
 
 <div id="parseMan">
 
 <sup>utils</sup> . parseMan ( manifoldString )   <span class="title-ref">=&gt; BigNumber</span>  
-Parses the _manifoldString_ representation of MXW into a BigNumber
+Parses the _manifoldString_ representation of ERC into a BigNumber
 instance of the amount of gwei.
 
 </div>
@@ -343,7 +343,7 @@ instance of the amount of gwei.
 
 <sup>utils</sup> . formatMan ( gwei )   <span class="title-ref">=&gt; string</span>  
 Formats an amount of _gwei_ into a decimal string representing the amount
-of MXW. The output will always include at least one whole number and at
+of ERC. The output will always include at least one whole number and at
 least one decimal place, otherwise leading and trailing 0's will be
 trimmed.
 

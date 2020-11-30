@@ -26,7 +26,7 @@ const NegativeOne: BigNumber = bigNumberify(-1);
 const Zero: BigNumber = bigNumberify(0);
 const One: BigNumber = bigNumberify(1);
 const Two: BigNumber = bigNumberify(2);
-const CinPerMan: BigNumber = bigNumberify("1000000000000000000");
+const GweiPerMan: BigNumber = bigNumberify("1000000000000000000");
 const MaxUint256: BigNumber = bigNumberify(
   "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
 );
@@ -42,6 +42,6 @@ export {
   Zero,
   One,
   Two,
-  CinPerMan,
+  GweiPerMan,
   MaxUint256,
 };

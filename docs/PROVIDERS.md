@@ -261,7 +261,7 @@ The valid routes and transaction types are:
 
 - **bank** --- the route for bank module
 
-  - **bank-send** --- the transfer MXW transaction type
+  - **bank-send** --- the transfer ERC transaction type
 
 - **token** --- the route for token module
 
