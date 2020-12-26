@@ -1,6 +1,7 @@
 {
   "name": "@manifold/sdk",
   "version": "1.1.0",
+  "private": true,
   "npmClient": "yarn",
   "useWorkspaces": true,
   "description": "Manifold Finance SDK",
