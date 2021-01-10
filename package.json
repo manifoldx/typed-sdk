@@ -1,6 +1,6 @@
 {
   "name": "@manifold/sdk",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "npmClient": "yarn",
   "useWorkspaces": true,
@@ -90,6 +90,8 @@
     "js-sha3": "^0.8.0",
     "scrypt-js": "^2.0.4",
     "uuid": "^3.4.0"
-    },
-  "workspaces": ["sdk/*"]
+  },
+  "workspaces": [
+    "sdk/*"
+  ]
 }
