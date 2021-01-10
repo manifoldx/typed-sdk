@@ -4,9 +4,11 @@ description: a well typed sdk for web3
 version: 0.1.1
 ---
 
-# `manifold-sdk`
+# `manifold-sdk` 
 
-> a human web3 interface
+![nodejs](https://github.com/manifoldfinance/typed-sdk/workflows/nodejs/badge.svg)
+
+> a human web3 interface 
 
 ---
 
