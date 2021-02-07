@@ -42,18 +42,9 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: yarn install, build, and test
         run: |
-          yarn install
+          npm i -g lerna 
+          lerna bootstrap
         env:
           CI: true
 
-# Semantic Distribution 
-      - uses: cycjimmy/semantic-release-action@v2.5.3
-        with:
-         semantic_version: 16
-         env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}:
-         branches: master
-         extra_plugins: |
-          @semantic-release/changelog@3.0.0
-          @semantic-release/git
 
