@@ -1,7 +1,7 @@
 # GitHub Nodejs CI
 name: nodejs
 
-on: [push, pull_request]
+on: [pull_request]
   
 env:
   CI: true
