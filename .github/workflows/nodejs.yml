@@ -42,6 +42,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: yarn install, build, and test
         run: |
+          npm config set unsafe-perm true
           npm i -g lerna 
           lerna bootstrap
         env:
