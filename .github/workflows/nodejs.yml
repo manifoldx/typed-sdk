@@ -28,8 +28,7 @@ jobs:
           check-latest: true
       - name: npm install, build, and test
         run: |
-          npm install -g lerna
-          npm install
-          lerna bootstrap
+         yarn install
+         yarn install --dev lerna
         env:
           CI: true
