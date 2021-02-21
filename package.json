@@ -88,7 +88,7 @@
     "elliptic": "^6.5.1",
     "hash.js": "^1.1.7",
     "js-sha3": "^0.8.0",
-    "scrypt-js": "^2.0.4",
+    "scrypt-js": "^3.0.1",
     "uuid": "^3.4.0"
   },
   "workspaces": [
