@@ -28,7 +28,7 @@ jobs:
           check-latest: true
       - name: npm install, build, and test
         run: |
-         yarn install
-         yarn install --dev lerna
+         npm install
+         npm install --package-lock-only
         env:
-          CI: true
+          CI: ''
