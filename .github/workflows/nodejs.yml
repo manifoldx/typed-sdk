@@ -3,11 +3,6 @@ name: nodejs
 
 on: [pull_request]
   
-env:
-  CI: true
-  FORCE_COLOR: 2
-
-
 jobs:
   run:
     name: Node ${{ matrix.node }} on ${{ matrix.os }}
