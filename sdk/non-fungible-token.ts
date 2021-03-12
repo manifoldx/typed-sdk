@@ -45,6 +45,18 @@ export enum NonFungibleTokenActions {
   updateNFTEndorserList = "updateNFTEndorserList",
 }
 
+/*
+export enum NFTokenStateFlags {
+  nonfungible = '0x0001',
+  mint = '0x0002',
+  burn = '0x0004',
+  frozen = '0x0008',
+  approved = '0x0010',
+  transferable = '0x0020',
+  modifiable = '0x0040',
+  public = '0x0080',
+}
+**/
 export enum NFTokenStateFlags {
   nonfungible = 0x0001,
   mint = 0x0002,
@@ -53,7 +65,7 @@ export enum NFTokenStateFlags {
   approved = 0x0010,
   transferable = 0x0020,
   modifiable = 0x0040,
-  public = 0x0080,
+  public = 0x0080'
 }
 
 export interface NonFungibleTokenProperties {
@@ -587,7 +599,7 @@ export class NonFungibleToken {
   }
 
   /**
-   * Update non-fungible token metadata
+   * @summary Update non-fungible token metadata
    * @param metadata new metadata
    * @param overrides options
    */
@@ -633,7 +645,7 @@ export class NonFungibleToken {
   ): Promise<TransactionRequest> {
     if (!this.signer) {
       errors.throwError(
-        "update non fungible token item metadata require signer",
+        "@error: update non fungible token item metadata requires _signer",
         errors.NOT_INITIALIZED,
         { arg: "signer" }
       );
@@ -672,7 +684,8 @@ export class NonFungibleToken {
   }
 
   /**
-   * Update non-fungible token endorser list
+   * @updateEndorserList
+   * @summary Update non-fungible token endorser list
    * @param endorsers new endorsers
    * @param overrides options
    */
@@ -729,7 +742,7 @@ export class NonFungibleToken {
       ({ address }) => {
         if (!address) {
           return errors.throwError(
-            "update non fungible token endorser list require signer address",
+            "@error: update non fungible token endorser list require _signerAddress",
             errors.MISSING_ARGUMENT,
             { arg: "signerAddress" }
           );
@@ -758,7 +771,8 @@ export class NonFungibleToken {
   }
 
   /**
-   * Mint NFT item
+   * @mint
+   * @summary Mint NFT item
    * @param toAddressOrName receiver address
    * @param item item to mint
    * @param overrides options
@@ -863,7 +877,8 @@ export class NonFungibleToken {
   }
 
   /**
-   * Sign non fungible token status transaction by issuer
+   * @signNonFungibleTokenStatusTransaction
+   * @summarySign non fungible token status transaction by issuer
    * @param transaction non fungible token status transaction
    * @param signer signer wallet
    * @param overrides options
@@ -887,7 +902,7 @@ export class NonFungibleToken {
       publicKeyType: signer.getPublicKeyType(),
       compressedPublicKey: signer.getCompressedPublicKey(),
     }).then(({ publicKeyType, compressedPublicKey }) => {
-      // Convert number and big number to string
+      // @dev Convert number and big number to string
       transaction = iterate(transaction, function (key, value, type) {
         switch (type) {
           case "Number":
@@ -914,7 +929,8 @@ export class NonFungibleToken {
   }
 
   /**
-   * Sign non fungible token item status transaction by issuer
+   * @signNonFungibleTokenItemStatusTransaction
+   * @summary Sign non fungible token item status transaction by issuer
    * @param transaction non fungible token item status transaction
    * @param signer signer wallet
    * @param overrides options
@@ -1140,7 +1156,8 @@ export class NonFungibleToken {
   }
 
   /**
-   * Send non fungible token item status transaction by middleware
+   * @sendNonFungibleTokenItemStatusTransaction
+   * @summary Send non fungible token item status transaction by middleware
    * @param transaction non fungible token status transaction
    * @param signer signer wallet
    * @param overrides options
@@ -1221,7 +1238,8 @@ export class NonFungibleToken {
   }
 
   /**
-   * Freeze NFT item by provider
+   * @freezeNonFungibleTokenItem
+   * @summary Freeze NFT item by provider
    * @param symbol token item symbol
    * @param itemID token item id
    * @param overrides options
@@ -1242,7 +1260,8 @@ export class NonFungibleToken {
   }
 
   /**
-   * Unfreeze NFT item by provider
+   * @unfreezeNonFungibleTokenItem
+   * @summary Unfreeze NFT item by provider
    * @param symbol token item symbol
    * @param itemID token item id
    * @param overrides options
