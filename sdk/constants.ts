@@ -4,10 +4,10 @@ import { BigNumber, bigNumberify } from "./utils/bignumber";
 import { smallestUnitName } from "./utils/units";
 
 const AddressPrefix = "manifold";
-const ValOperatorAddressPrefix = "manifoldvaloper";
+const ValOperatorAddressPrefix = "manifoldDeveloper";
 const KycAddressPrefix = "kyc";
 
-// Do we have a zero address?
+// @test Do we have a zero address?
 const AddressZero = "manifold1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqgcpfl3";
 const HashZero =
   "0x0000000000000000000000000000000000000000000000000000000000000000";
